@@ -1,0 +1,14 @@
+.button{
+    display:flex;
+    width:70%;
+    margin:auto;
+    justify-content: space-between;
+padding:5rem 3rem;
+  //background-color: #9a2020;
+    button{
+        color: rgb(40, 38, 38);
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+}

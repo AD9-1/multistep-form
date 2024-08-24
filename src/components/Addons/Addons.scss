@@ -1,0 +1,81 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles//partials/mixins.scss" as *;
+.addons {
+  width: 70%;
+  padding: 2rem 0rem;
+  box-shadow: 6px 1px 12px 1px rgb(223, 220, 220);
+  margin: auto;
+  @include mobile {
+    width: 90%;
+  }
+  &__plan {
+    font-family: "Ubuntu-bold";
+    margin-bottom: 1rem;
+  }
+  &__moyr {
+    font-family: Ubuntu-Medium;
+    color: $Light-grey;
+    margin-bottom: 3rem;
+  }
+  &_options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    @include mobile {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    section {
+      height: 8rem;
+      width: 15%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 10px;
+      @include mobile {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.5rem;
+        width: 80%;
+        height: auto;
+        margin: auto;
+        padding: 1.124rem;
+      }
+
+      .option {
+        h3 {
+          font-family: Ubuntu-Regular;
+          font-size: 1em;
+          @include mobile {
+            text-align: left;
+          }
+        }
+        p {
+          color: $Light-grey;
+          font-size: 13px;
+          @include mobile {
+            text-align: left;
+          }
+        }
+      }
+    }
+    &_clicked {
+      border: 1px solid rgba(104, 50, 219, 0.425);
+      background-color:rgba(204, 197, 219, 0.425) ;
+    }
+    &_unclicked {
+      border: 1px solid $Light-grey;
+    }
+  }
+  .slider {
+    background-color: #d7d6d06e;
+    width: 40%;
+    margin: auto auto;
+    margin-top: 2rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,47 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.personalinfo {
+  width: 60%;
+  background-color: aliceblue;
+  margin: auto;
+  padding: 1.5rem;
+  color:$Bluish-grey;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  &_heading {
+    font-family: "Ubuntu-bold";
+    margin-bottom: 1rem;
+  }
+  &_para {
+    font-family: "Ubuntu-regular";
+    margin-bottom: 1rem;
+    text-align: center;
+    color:$Light-grey;
+    width:80%;
+    line-height: 1.5;
+  }
+  &_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width:70%;
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    
+      label {
+        font-family: "Ubuntu-Medium";
+        text-align: left;
+      }
+      input {
+        height: 30px;
+        
+        border: 0.1px solid $Light-grey;
+      }
+    }
+  }
+}
