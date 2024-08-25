@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProgressBar.scss";
 import sidebar from "../../assets/images/bg-sidebar-desktop.svg";
 import mobSidebar from "../../assets/images/bg-sidebar-mobile.svg";
 const ProgressBar = ({ step, setStep }) => {
@@ -23,10 +24,16 @@ const ProgressBar = ({ step, setStep }) => {
           <article className="unfill">3</article>
           <article>
             <p>step 3</p>
-            <p className="unfill">ADD-ONS</p>
+            <p className="capital">ADD-ONS</p>
           </article>
         </div>
-        <div>a</div>
+        <div>
+          <article className="unfill">4</article>
+          <article>
+            <p>step 4</p>
+            <p className="capital"> SUMMARY</p>
+          </article>
+        </div>
       </section>
     </div>
   );
