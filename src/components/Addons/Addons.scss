@@ -72,10 +72,13 @@
   }
   .slider {
     background-color: #d7d6d06e;
-    width: 40%;
+    width: 80%;
     margin: auto auto;
     margin-top: 2rem;
     border-radius: 5px;
     padding: 0.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
 }

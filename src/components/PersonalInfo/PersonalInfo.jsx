@@ -1,11 +1,14 @@
 import React from "react";
 import "./PersonalInfo.scss";
 import Button from "../Button/Button";
-const PersonalInfo = ({step,setStep}) => {
+const PersonalInfo = ({ step, setStep }) => {
   const handleNext = () => {
-    setStep(step+1);
-  }
+    setStep(step + 1);
+  };
+  sessionStorage.removeItem("selectedSessions")
+  sessionStorage.removeItem("labelSession")
   return (
+    <>
     <div className="personalinfo">
       <h2 className="personalinfo_heading">Personal info</h2>
       <p className="personalinfo_para">
@@ -25,8 +28,18 @@ const PersonalInfo = ({step,setStep}) => {
           <input type="number" name="phone" />
         </section>
       </div>
-     {step===1 && <Button next="Next Step" click={handleNext}/>} 
+      
     </div>
+    {step === 1 && (
+        <Button
+          next="Next Step"
+          clickNext={handleNext}
+          background="#0d0739bd"
+          color="white"
+          step={step}
+        />
+      )}
+    </>
   );
 };
 
