@@ -1,0 +1,44 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles//partials/mixins.scss" as *;
+
+.progressbar {
+  &_container {
+    background: url("../../assets/images/bg-sidebar-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px; 
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+    gap: 2em;
+    &_div {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      width:165px;
+     .steps{
+      &_number{
+        font-family: Ubuntu-regular;;
+        color: rgba(221, 217, 217, 0.671);
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+      .capital{
+        font-family: Ubuntu-Medium;
+        color:white;
+      }
+     }
+     .unfill{
+       border:1px solid white;
+       padding:.5rem;
+       width:14%;
+       border-radius: 50%;
+       text-align: center;
+       color:white;
+     }
+    }
+  }
+}
