@@ -1,14 +1,14 @@
 .home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
+
+  width: 65%;
   height: 80vh;
-  margin: auto;
+
   &__first {
     height: 100%;
+    width:100%;
     display: flex;
     justify-content: center;
+    border:1.5rem solid white;
     &--steps {
       flex: 1;
       position: relative;
@@ -16,9 +16,9 @@
     }
   }
   &__second {
-    // width:90%;
-    // position:absolute;
-    // left:40%;
-    // top:70%;
+     width:70%;
+     position:absolute;
+     left:43%;
+     top:80%;
   }
 }
