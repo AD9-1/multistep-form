@@ -13,7 +13,7 @@ const PersonalInfo = ({ step, setStep }) => {
     sessionStorage.removeItem("clickSessions");
   }, []);
   return (
-    <section className="parent">
+ 
       <div className="personalinfo">
         <h2 className="personalinfo_heading">Personal info</h2>
         <p className="personalinfo_para">
@@ -34,7 +34,7 @@ const PersonalInfo = ({ step, setStep }) => {
           </section>
         </div>
       </div>
-    </section>
+
   );
 };
 

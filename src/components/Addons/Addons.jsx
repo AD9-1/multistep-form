@@ -62,7 +62,7 @@ const Addons = ({ step, setStep }) => {
   };
 
   return (
-    <>
+  
       <div className="addons">
         <h2 className="addons__plan">Select Your Plan</h2>
         <p className="addons__moyr">
@@ -147,7 +147,7 @@ const Addons = ({ step, setStep }) => {
           </div>
         </section>
       </div>
-    </>
+ 
   );
 };
 

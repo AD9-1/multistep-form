@@ -40,7 +40,7 @@ const SelectPlan = ({ step, setStep }) => {
   };
 
   return (
-    <>
+ 
       <div className="selectplan">
         <h2 className="selectplan-addons">Pick add-ons</h2>
         <p className="selectplan-stmt">
@@ -110,7 +110,7 @@ const SelectPlan = ({ step, setStep }) => {
         </div>
       </div>
      
-    </>
+
   );
 };
 

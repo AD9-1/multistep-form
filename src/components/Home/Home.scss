@@ -1,20 +1,24 @@
 .home {
-  background-color: aliceblue;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 80%;
+  height: 80vh;
+  margin: auto;
   &__first {
+    height: 100%;
     display: flex;
     justify-content: center;
     &--steps {
+      flex: 1;
       position: relative;
+      height: 100%;
     }
   }
   &__second {
-    width:37%;
-    position:absolute;
-    left:40%;
-    top:70%;
+    // width:90%;
+    // position:absolute;
+    // left:40%;
+    // top:70%;
   }
 }

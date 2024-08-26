@@ -3,14 +3,14 @@
 @use "../../styles//partials/mixins.scss" as *;
 
 .progressbar {
+  height: 100%;
+  flex: 0.3;
   &_container {
     background: url("../../assets/images/bg-sidebar-desktop.svg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 500px; 
-    width: 200px;
+    height: 92%;
     display: flex;
-
     flex-direction: column;
     padding: 2em;
     align-items: center;
@@ -20,32 +20,35 @@
       display: flex;
       align-items: center;
       gap: 1em;
-      width:165px;
-     .steps{
-      &_number{
-        font-family: Ubuntu-regular;;
-        color: rgba(221, 217, 217, 0.671);
-        text-transform: uppercase;
-        font-size: 13px;
+      width: 167px;
+      .steps {
+        flex: 1;
+        &_number {
+          font-family: Ubuntu-regular;
+          color: rgba(221, 217, 217, 0.671);
+          text-transform: uppercase;
+          font-size: 13px;
+          text-align: justify;
+        }
+        .capital {
+          font-family: Ubuntu-Medium;
+          color: white;
+          text-align: justify;
+        }
       }
-      .capital{
-        font-family: Ubuntu-Medium;
-        color:white;
+      .unfill {
+        border: 1px solid white;
+        padding: 0.5rem;
+        width: 14%;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
       }
-     }
-     .unfill{
-       border:1px solid white;
-       padding:.5rem;
-       width:14%;
-       border-radius: 50%;
-       text-align: center;
-       color:white;
-     }
-     .fill{
-      background-color: rgb(133, 224, 240);
-      color:black;
-      border: 0cap;
-     }
+      .fill {
+        background-color: rgb(133, 224, 240);
+        color: black;
+        border: 0cap;
+      }
     }
   }
 }

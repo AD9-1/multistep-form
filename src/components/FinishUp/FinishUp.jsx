@@ -21,7 +21,7 @@ const FinishUp = ({ step, setStep }) => {
   };
 
   return (
-    <>
+
       <div className="finishup">
         <div className="finishup__upper">
           <h2>Finishing Up</h2>
@@ -100,7 +100,7 @@ const FinishUp = ({ step, setStep }) => {
           </p>
         </article>
       </div>
-    </>
+   
   );
 };
 

@@ -18,9 +18,9 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home__first">
-        <div>
-          <ProgressBar step={step} />
-        </div>
+    <ProgressBar step={step} />
+        
+        
         <div className="home__first--steps">
           {step === 1 && <PersonalInfo step={step} setStep={setStep} />}
           {step === 2 && <Addons step={step} setStep={setStep} />}

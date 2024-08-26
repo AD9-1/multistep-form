@@ -9,9 +9,9 @@ import { PlanProvider } from "./context/PlanContext";
 
 function App() {
   return (
-    <PlanProvider>
+    <div className="App">
       <Home />
-    </PlanProvider>
+    </div>
   );
 }
 

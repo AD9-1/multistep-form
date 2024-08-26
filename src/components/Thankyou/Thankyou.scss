@@ -2,9 +2,8 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles//partials/mixins.scss" as *;
 .thankyou {
-  width: 40vw;
-  height: 500px;
-  padding: 1.5rem;
+
+  height: 100%;
   text-align: center;
   background-color: white;
   display: flex;
@@ -22,6 +21,7 @@
       font-family: Ubuntu-bold;
     }
     p {
+      width:70%;
       color: $Light-grey;
     }
   }
