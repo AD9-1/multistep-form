@@ -21,7 +21,7 @@ const Home = () => {
         <div>
           <ProgressBar step={step} />
         </div>
-        <div>
+        <div className="home__first--steps">
           {step === 1 && <PersonalInfo step={step} setStep={setStep} />}
           {step === 2 && <Addons step={step} setStep={setStep} />}
           {step === 3 && <SelectPlan step={step} setStep={setStep} />}

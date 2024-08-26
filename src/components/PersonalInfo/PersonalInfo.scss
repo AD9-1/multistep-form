@@ -10,18 +10,18 @@
   color: $Bluish-grey;
   display: flex;
   flex-direction: column;
-margin-bottom: 3rem;
+align-items: center;
 
   &_heading {
     font-family: "Ubuntu-bold";
     margin-bottom: 1rem;
+    width: 70%;
   }
   &_para {
     font-family: "Ubuntu-regular";
     margin-bottom: 1rem;
-
     color: $Light-grey;
-    width: 80%;
+    width: 70%;
     line-height: 1.5;
   }
   &_info {

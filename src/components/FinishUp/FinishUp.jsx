@@ -63,7 +63,14 @@ const FinishUp = ({ step, setStep }) => {
               <article className="finishup__block__article" key={key}>
                 <p>{key}</p>
                 <p>
-                  +${value}/{selectedplan.billing === "monthly" ? "mo" : "yr"}
+                  +${value}/
+                  {Object.keys(selectedplan).length === 0
+                    ? time === "monthly"
+                      ? "mo"
+                      : "yr"
+                    : selectedplan.billing === "monthly"
+                    ? "mo"
+                    : "yr"}
                 </p>
               </article>
             );
@@ -93,7 +100,6 @@ const FinishUp = ({ step, setStep }) => {
           </p>
         </article>
       </div>
-     
     </>
   );
 };
