@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Addons from "./components/Addons/Addons";
 import Button from "./components/Button/Button";
 import FinishUp from "./components/FinishUp/FinishUp";

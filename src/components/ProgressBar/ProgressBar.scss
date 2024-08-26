@@ -1,9 +1,10 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
-@use "../../styles//partials/mixins.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
 
 .progressbar {
   flex: 0.4;
+ 
   &_container {
     background: url("../../assets/images/bg-sidebar-desktop.svg");
     background-size: cover;
@@ -13,13 +14,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    @include mobile {
+      background: url("../../assets/images/bg-sidebar-mobile.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+    }
+    
     &_div {
       display: flex;
       align-items: center;
       gap: 1em;
       width: 167px;
       margin-top: 3em;
+      @include mobile {
+        margin: 0;
+        width: 10%;
+      }
       .steps {
         flex: 1;
         &_number {
@@ -34,6 +48,9 @@
           color: white;
           text-align: justify;
         }
+        @include mobile {
+          display: none;
+        }
       }
       .unfill {
         border: 1px solid white;
@@ -42,6 +59,9 @@
         border-radius: 50%;
         text-align: center;
         color: white;
+        @include mobile {
+          width: 50%;
+        }
       }
       .fill {
         background-color: rgb(133, 224, 240);
