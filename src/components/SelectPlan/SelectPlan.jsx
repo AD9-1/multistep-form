@@ -15,7 +15,7 @@ const SelectPlan = ({ step, setStep }) => {
       : [false, false, false];
   });
 
-  const { selectedplan, setAddons } = useContext(PlanContext);
+  const { selectedplan, setAddons,time } = useContext(PlanContext);
 
 
   const handleChange = (event, index) => {
@@ -34,16 +34,9 @@ const SelectPlan = ({ step, setStep }) => {
     }
     setLabel(newLabel);
     setSelectedValue(updatedvalue);
+    setAddons(updatedvalue);
     sessionStorage.setItem("labelSession", JSON.stringify(newLabel));
     sessionStorage.setItem("selectedSessions", JSON.stringify(updatedvalue));
-  };
-
-  const handleBack = () => {
-    setStep(step - 1);
-  };
-  const handleNext = () => {
-    setStep(step + 1);
-    setAddons(selectedValues);
   };
 
   return (
@@ -60,7 +53,7 @@ const SelectPlan = ({ step, setStep }) => {
                 type="checkbox"
                 onChange={(event) => handleChange(event, 0)}
                 name="Online Services"
-                value={selectedplan.billing === "monthly" ? 1 : 10}
+                value={time === "monthly" ? 1 : 10}
                 checked={Object.keys(selectedValues).includes("Online Services")}
               />
               <div className="checkbox-custom"></div>
@@ -69,8 +62,8 @@ const SelectPlan = ({ step, setStep }) => {
                 <p>Access to multiplayer games</p>
               </article>
               <span>
-                +${selectedplan.billing === "monthly" ? 1 : 10}/
-                {selectedplan.billing === "monthly" ? "mo" : "yr"}
+                +${time === "monthly" ? 1 : 10}/
+                {time === "monthly" ? "mo" : "yr"}
               </span>
             </label>
           </section>
@@ -80,7 +73,7 @@ const SelectPlan = ({ step, setStep }) => {
                 type="checkbox"
                 onChange={(event) => handleChange(event, 1)}
                 name="Larger Storage"
-                value={selectedplan.billing === "monthly" ? 2 : 20}
+                value={time === "monthly" ? 2 : 20}
                 checked={Object.keys(selectedValues).includes("Larger Storage")}
               />
               <div className="checkbox-custom"></div>
@@ -89,8 +82,8 @@ const SelectPlan = ({ step, setStep }) => {
                 <p>Extra 1TB of cloud save</p>
               </article>
               <span>
-                +${selectedplan.billing === "monthly" ? 2 : 20}/
-                {selectedplan.billing === "monthly" ? "mo" : "yr"}
+                +${time === "monthly" ? 2 : 20}/
+                {time === "monthly" ? "mo" : "yr"}
               </span>
             </label>
           </section>
@@ -100,7 +93,7 @@ const SelectPlan = ({ step, setStep }) => {
                 type="checkbox"
                 onChange={(event) => handleChange(event, 2)}
                 name="Customizable Profile"
-                value={selectedplan.billing === "monthly" ? 2 : 20}
+                value={time === "monthly" ? 2 : 20}
                 checked={Object.keys(selectedValues).includes("Customizable Profile")}
               />
               <div className="checkbox-custom"></div>
@@ -109,24 +102,14 @@ const SelectPlan = ({ step, setStep }) => {
                 <p>Custom Theme</p>
               </article>
               <span>
-                +${selectedplan.billing === "monthly" ? 2 : 20}/
-                {selectedplan.billing === "monthly" ? "mo" : "yr"}
+                +${time === "monthly" ? 2 : 20}/
+                {time === "monthly" ? "mo" : "yr"}
               </span>
             </label>
           </section>
         </div>
       </div>
-      <Button
-        next="Next Step"
-        back="Go Back"
-        clickBack={handleBack}
-        clickNext={handleNext}
-        background="#0d0739bd"
-        color="white"
-        backgroundBack="#e5dfdf"
-        colorBack="grey"
-        step={step}
-      />
+     
     </>
   );
 };

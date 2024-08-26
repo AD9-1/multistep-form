@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import arcade from "../../assets/images/icon-arcade.svg";
 import advanced from "../../assets/images/icon-advanced.svg";
 import pro from "../../assets/images/icon-pro.svg";
@@ -7,32 +7,60 @@ import "./Addons.scss";
 import Button from "../Button/Button";
 import { PlanContext } from "../../context/PlanContext";
 const Addons = ({ step, setStep }) => {
-  const [checked, setChecked] = React.useState(false);
-  const [click, setClick] = React.useState(0);
-  const { selectedplan, setSelectedPlan } = useContext(PlanContext);
+  const [checked, setChecked] = React.useState(
+    sessionStorage.getItem("timeSession")
+      ? JSON.parse(sessionStorage.getItem("timeSession"))
+      : false
+  );
+  const [click, setClick] = React.useState(
+    sessionStorage.getItem("clickSessions")
+      ? JSON.parse(sessionStorage.getItem("clickSessions"))
+      : 0
+  );
+  const { selectedplan, setSelectedPlan, time, setTime,setAddons } =
+    useContext(PlanContext);
 
+  const monthly = [9, 12, 15];
+  const yearly = [90, 120, 150];
+  const plan = ["Arcade", "Advanced", "Pro"];
+  let billing;
   const handleChange = (event) => {
     setChecked(event.target.checked);
+    setAddons({})
+    if (event.target.checked === false) {
+      setSelectedPlan({
+        plan: plan[click],
+        billing: "monthly",
+        billingValue: monthly[click],
+      });
+      setTime("monthly");
+    } else {
+      setSelectedPlan({
+        plan: plan[click],
+        billing: "yearly",
+        billingValue: yearly[click],
+      });
+      setTime("yearly");
+    }
+    sessionStorage.setItem("timeSession", JSON.stringify(event.target.checked));
+    sessionStorage.removeItem("selectedSessions");
+    sessionStorage.removeItem("labelSession");
   };
   const handleClick = (index) => {
+    sessionStorage.removeItem("selectedSessions");
+    sessionStorage.removeItem("labelSession");
+    setAddons({});
     setClick(index);
-  };
-  const handleBack = () => {
-    setStep(step - 1);
-  };
-  const handleNext = () => {
-    const billing = !checked ? "monthly" : "yearly";
-    const monthly = [9, 12, 15];
-    const yearly = [90, 120, 150];
-    const plan = ["Arcade", "Advanced", "Pro"];
-    const billingValue = billing === "monthly" ? monthly[click] : yearly[click];
+    billing = !checked ? "monthly" : "yearly";
+    const billingValue = billing === "monthly" ? monthly[index] : yearly[index];
     setSelectedPlan({
-      plan: plan[click],
+      plan: plan[index],
       billing: billing,
       billingValue: billingValue,
     });
-    setStep(step + 1);
+    sessionStorage.setItem("clickSessions", JSON.stringify(index));
   };
+
   return (
     <>
       <div className="addons">
@@ -119,17 +147,6 @@ const Addons = ({ step, setStep }) => {
           </div>
         </section>
       </div>
-      <Button
-        next="Next Step"
-        back="Go Back"
-        clickBack={handleBack}
-        clickNext={handleNext}
-        background="#0d0739bd"
-        color="white"
-        backgroundBack="#e5dfdf"
-        colorBack="grey"
-        step={step}
-      />
     </>
   );
 };

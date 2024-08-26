@@ -2,10 +2,12 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 .finishup {
-  width: 80%;
-  margin: auto;
-  box-shadow: 1px 1px 6px 7px rgb(190, 185, 185);
-  padding: 2rem;
+  width: 40vw;
+  height: 500px;
+  padding:  1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 6px 1px 12px 1px rgb(223, 220, 220);
+  background-color: white;
   &__upper {
     max-width: 80%;
     margin: auto;

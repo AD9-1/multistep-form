@@ -3,27 +3,28 @@ import "./FinishUp.scss";
 import { PlanContext } from "../../context/PlanContext";
 import Button from "../Button/Button";
 const FinishUp = ({ step, setStep }) => {
-  const { selectedplan, addons } = useContext(PlanContext);
-
+  const { selectedplan, addons, time } = useContext(PlanContext);
+  console.log(addons);
+  console.log(selectedplan);
   const calculation = () => {
     let total = 0;
-    total += parseInt(selectedplan.billingValue);
+    total =
+      total + Object.keys(selectedplan).length
+        ? parseInt(selectedplan.billingValue)
+        : time === "monthly"
+        ? 9
+        : 90;
     Object.values(addons).forEach((value) => {
       total += parseInt(value);
     });
     return total;
   };
-  const handleBack = () => {
-    setStep(step - 1);
-  };
-  const handleNext = () => {
-    setStep(step + 1);
-  };
+
   return (
     <>
       <div className="finishup">
         <div className="finishup__upper">
-          <h3>Finishing Up</h3>
+          <h2>Finishing Up</h2>
           <p className="description">
             Double-check everything before confirming
           </p>
@@ -32,11 +33,28 @@ const FinishUp = ({ step, setStep }) => {
         <div className="finishup__block">
           <article className="finishup__block__article">
             <p className="custom">
-              {selectedplan.plan}({selectedplan.billing})
+              {Object.keys(selectedplan).length === 0
+                ? time === "monthly"
+                  ? "Arcade (monthly)"
+                  : "Arcade (yearly)"
+                : `${selectedplan.plan} (${selectedplan.billing})`}
             </p>
+
             <p className="custom">
-              ${selectedplan.billingValue}/
-              {selectedplan.billing === "monthly" ? "mo" : "yr"}
+              $
+              {Object.keys(selectedplan).length === 0
+                ? time === "monthly"
+                  ? 9
+                  : 90
+                : selectedplan.billingValue}
+              /
+              {Object.keys(selectedplan).length === 0
+                ? time === "monthly"
+                  ? "mo"
+                  : "yr"
+                : selectedplan.billing === "monthly"
+                ? "mo"
+                : "yr"}
             </p>
           </article>
           <hr className="horizontal--line" />
@@ -53,24 +71,29 @@ const FinishUp = ({ step, setStep }) => {
         </div>
         <article className="finishup__article">
           <p>
-            Total (per {selectedplan.billing === "monthly" ? "month" : "year"})
+            Total (per{" "}
+            {Object.keys(selectedplan).length === 0
+              ? time === "monthly"
+                ? "month"
+                : "year"
+              : selectedplan.billing === "monthly"
+              ? "month"
+              : "year"}
+            )
           </p>
           <p>
-            ${calculation()}/{selectedplan.billing === "monthly" ? "mo" : "yr"}
+            ${calculation()}/
+            {Object.keys(selectedplan).length === 0
+              ? time === "monthly"
+                ? "mo"
+                : "yr"
+              : selectedplan.billing === "monthly"
+              ? "mo"
+              : "yr"}
           </p>
         </article>
       </div>
-      <Button
-        next="Confirm"
-        back="Go Back"
-        clickBack={handleBack}
-        clickNext={handleNext}
-        background="rgb(34, 37, 211)"
-        color="white"
-        backgroundBack="#e5dfdf"
-        colorBack="grey"
-        step={step}
-      />
+     
     </>
   );
 };

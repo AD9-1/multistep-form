@@ -10,10 +10,12 @@
     height: 500px; 
     width: 200px;
     display: flex;
+
     flex-direction: column;
     padding: 2em;
     align-items: center;
     gap: 2em;
+
     &_div {
       display: flex;
       align-items: center;
@@ -38,6 +40,11 @@
        border-radius: 50%;
        text-align: center;
        color:white;
+     }
+     .fill{
+      background-color: rgb(133, 224, 240);
+      color:black;
+      border: 0cap;
      }
     }
   }
