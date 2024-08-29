@@ -42,7 +42,7 @@ const SelectPlan = ({ step, setStep }) => {
   return (
  
       <div className="selectplan">
-        <h2 className="selectplan-addons">Pick add-ons</h2>
+        <h1 className="selectplan-addons">Pick add-ons</h1>
         <p className="selectplan-stmt">
           Add-ons help enhance your gaming experience
         </p>

@@ -6,11 +6,11 @@
   background-color: white;
   width: 100%;
   height: 100%;
-
   color: $Bluish-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include mobile{  border-radius: 15px;}
 
   &_heading {
     font-family: "Ubuntu-bold";
@@ -41,7 +41,6 @@
       }
       input {
         height: 40px;
-
         border: 0.1px solid $Light-grey;
       }
     }

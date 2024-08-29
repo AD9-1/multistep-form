@@ -1,12 +1,14 @@
-.button{
-    display:flex;
-    justify-content: space-between;
- //background-color: #9a2020;
- width:50%;
-    button{
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+.button {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    padding: 15px 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

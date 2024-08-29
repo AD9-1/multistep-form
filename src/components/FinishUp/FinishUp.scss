@@ -1,36 +1,36 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
-.finishup {
-  
+.finishup { 
   height: 100%;
   background-color: white;
+  padding:0 2rem;
   &__upper {
     max-width: 80%;
     margin: auto;
     margin-bottom: 1em;
     padding-top: 2em;
-    h3 {
+    h1 {
       font-family: Ubuntu-bold;
+      text-align: justify;
     }
     .description {
       font-family: Ubuntu-regular;
       color: $Light-grey;
-   
-  
+      text-align: justify;
     }
   }
 
   &__block {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 1.3rem;
     background-color: #c0bcbc2b;
     max-width: 80%;
     margin: auto;
     margin-bottom: 1rem;
-    padding: 1em;
+    margin-top: 4rem;;
+    padding:1em;
     border-radius: 10px;
     .horizontal--line {
       border: 0;

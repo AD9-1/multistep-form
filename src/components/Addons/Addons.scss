@@ -2,17 +2,17 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles//partials/mixins.scss" as *;
 .addons {
-
   height: 100%;
- // box-shadow: 6px 1px 12px 1px rgb(223, 220, 220);
+
   background-color: white;
-  // @include mobile {
-  //   width: 90%;
-  // }
+  @include mobile {
+    border-radius: 15px;
+  }
+
   &__plan {
     font-family: "Ubuntu-bold";
     margin-bottom: 1rem;
-padding-top: 5rem;
+    padding-top: 5rem;
   }
   &__moyr {
     font-family: Ubuntu-Medium;
@@ -23,10 +23,12 @@ padding-top: 5rem;
     display: flex;
     justify-content: space-around;
     margin-bottom: 1rem;
-    // @include mobile {
-    //   flex-direction: column;
-    //   gap: 2rem;
-    // }
+    padding:0 5rem;
+    @include mobile {
+      flex-direction: column;
+      gap: 2rem;
+      padding:0;
+    }
     section {
       height: 8rem;
       width: 15%;
@@ -35,16 +37,16 @@ padding-top: 5rem;
       flex-direction: column;
       justify-content: space-between;
       border-radius: 10px;
-      // @include mobile {
-      //   flex-direction: row;
-      //   justify-content: flex-start;
-      //   align-items: center;
-      //   gap: 1.5rem;
-      //   width: 80%;
-      //   height: auto;
-      //   margin: auto;
-      //   padding: 1.124rem;
-      // }
+      @include mobile {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.5rem;
+        width: 80%;
+        height: auto;
+        margin: auto;
+        padding: 1.124rem;
+      }
 
       .option {
         h3 {
@@ -56,7 +58,7 @@ padding-top: 5rem;
         }
         p {
           color: $Light-grey;
-          font-size: 13px;
+          font-size: 15px;
           @include mobile {
             text-align: left;
           }
@@ -65,21 +67,25 @@ padding-top: 5rem;
     }
     &_clicked {
       border: 1px solid rgba(104, 50, 219, 0.425);
-      background-color:rgba(204, 197, 219, 0.425) ;
+      background-color: rgba(204, 197, 219, 0.425);
     }
     &_unclicked {
       border: 1px solid $Light-grey;
     }
   }
   .slider {
-    background-color: #d7d6d06e;
-    width: 90%;
+    background-color: #d4cff01f;
+    width: 70%;
     margin: auto auto;
     margin-top: 2rem;
     border-radius: 5px;
     padding: 0.5rem;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5rem;
+    @include mobile{
+      width:80%;
+    }
   }
 }

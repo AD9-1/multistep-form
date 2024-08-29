@@ -4,9 +4,10 @@
 .home {
   width: 65%;
   height: 80vh;
-@include mobile{
-    width:100%;
-}
+  @include mobile {
+    width: 100%;
+    height: 90vh;
+  }
   &__first {
     height: 100%;
     width: 100%;
@@ -15,28 +16,32 @@
     border: 1.5rem solid white;
     @include mobile {
       flex-direction: column;
-      border:none;
-
+      border: none;
     }
     &--steps {
       flex: 1;
       position: relative;
       height: 100%;
-      @include mobile{
-        position:relative;
-        top:-5%;
-        width:90%;
-        margin:auto;
+      @include mobile {
+        position: relative;
+        top: -15%;
+        width: 90%;
+        margin: auto;
       }
     }
   }
   &__second {
-    width: 70%;
+    width: 35%;
     position: absolute;
     left: 43%;
     top: 80%;
-    @include mobile{
-        position:static;
+
+    @include mobile {
+      position: static;
+      margin: auto;
+      margin-top: 3rem;
+      padding-bottom: 5rem;
+      width: 93%;
     }
   }
 }
