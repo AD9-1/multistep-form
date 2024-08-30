@@ -9,20 +9,19 @@
   flex-direction: column;
   align-items: center;
   gap: 1em;
-border-radius: 10px;
+  border-radius: 10px;
   &-addons {
     font-family: "Ubuntu-bold";
     width: 75%;
     margin-top: 4rem;
     text-align: left;
-    color:$Marine-blue;
+    color: $Marine-blue;
   }
   &-stmt {
     font-family: Ubuntu-Regular;
     color: $Light-grey;
     width: 75%;
     text-align: left;
-  
   }
   &__checks {
     display: flex;
@@ -30,11 +29,7 @@ border-radius: 10px;
     gap: 2rem;
     width: 75%;
     margin-top: 2rem;
-    @include mobile
-    {
-      margin-top: 4rem;
-    }
-    
+
     &__option {
       .unlabel {
         align-items: center;
@@ -46,8 +41,12 @@ border-radius: 10px;
         border: 1px solid $Light-gray;
         cursor: pointer;
         border-radius: 10px;
-        &:hover{
-          border:1px solid $Purplish-blue;
+        @media (max-width:400px)
+        {
+          padding:1rem;
+        }
+        &:hover {
+          border: 1px solid $Purplish-blue;
         }
       }
       .label {
@@ -60,32 +59,46 @@ border-radius: 10px;
         background-color: $Magnolia;
         border: 1px solid $Purplish-blue;
         border-radius: 10px;
-      
+        @media (max-width:400px)
+        {
+          padding:1rem;
+        }
       }
-   
+
       article {
         text-align: left;
-        h3{
+        h3 {
           font-family: Ubuntu-Medium;
-          color:$Marine-blue;
+          color: $Marine-blue;
+          @media (max-width:475px){
+            font-size: .8rem;
+          }
         }
-        p{
-          color:$Cool-gray;
+        p {
+          color: $Cool-gray;
           font-family: Ubuntu-Medium;
+          @media (max-width:475px){
+            font-size: .7rem;
+          }
         }
-       
       }
       input {
         display: none;
       }
-      span{
+      span {
         color: $Purplish-blue;
+        @media (max-width:475px){
+          font-size: 0.8rem;
+        }
       }
       .checkbox-custom {
         width: 15px;
         height: 15px;
         border: 2px solid rgb(143, 145, 145);
-       
+        @media (max-width:475px){
+          width: 10px;
+          height: 10px;
+        }
       }
       input:checked + .checkbox-custom::after {
         content: "";
@@ -93,7 +106,12 @@ border-radius: 10px;
         width: 14px;
         height: 14px;
         background-color: $Purplish-blue;
-        transform: translate(-50%, 3.5%);
+        transform: translate(-45%, 3.5%);
+        @media (max-width:475px){
+          width: 10px;
+          height: 10px;
+          transform: translate(-49%, 1%);
+        }
       }
     }
   }
