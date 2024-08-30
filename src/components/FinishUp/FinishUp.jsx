@@ -24,7 +24,7 @@ const FinishUp = () => {
     <div className="finishup">
       <div className="finishup__upper">
         <h1>Finishing Up</h1>
-        <p className="description">Double-check everything before confirming</p>
+        <p className="description">Double-check everything looks OK before confirming</p>
       </div>
 
       <div className="finishup__block">

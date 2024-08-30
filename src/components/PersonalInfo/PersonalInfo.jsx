@@ -20,7 +20,7 @@ const PersonalInfo = ({ formData, setFormData, redfield, setRedfield }) => {
   };
   return (
     <div className="personalinfo">
-      <h2 className="personalinfo_heading">Personal info</h2>
+      <h1 className="personalinfo_heading">Personal info</h1>
       <p className="personalinfo_para">
         Please provide your name,email address and phone number
       </p>

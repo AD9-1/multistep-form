@@ -12,12 +12,14 @@
     padding-top: 2em;
     h1 {
       font-family: Ubuntu-bold;
-      text-align: justify;
+      text-align: left;
+      color: $Bluish-grey;
+      margin-bottom:1rem;
     }
     .description {
       font-family: Ubuntu-regular;
       color: $Light-grey;
-      text-align: justify;
+      text-align: left;
     }
   }
 

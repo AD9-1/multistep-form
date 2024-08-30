@@ -64,7 +64,7 @@ const Addons = () => {
   return (
   
       <div className="addons">
-        <h2 className="addons__plan">Select Your Plan</h2>
+        <h1 className="addons__plan">Select Your Plan</h1>
         <p className="addons__moyr">
           You have the option for monthly or yearly Billing
         </p>

@@ -15,12 +15,13 @@
     width: 75%;
     margin-top: 4rem;
     text-align: justify;
+    color:$Bluish-grey;
   }
   &-stmt {
     font-family: Ubuntu-Regular;
     color: $Light-grey;
     width: 75%;
-    text-align: justify;
+    text-align: left;
   }
   &__checks {
     display: flex;
@@ -58,7 +59,7 @@
       }
    
       article {
-        text-align: justify;
+        text-align: left;
         h3{
           font-family: Ubuntu-Medium;
           color:#0d0739bd;

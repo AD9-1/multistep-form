@@ -1,8 +1,7 @@
 import React from "react";
 import "./ProgressBar.scss";
-import sidebar from "../../assets/images/bg-sidebar-desktop.svg";
-import mobSidebar from "../../assets/images/bg-sidebar-mobile.svg";
-const ProgressBar = ({ step, setStep }) => {
+
+const ProgressBar = ({ step}) => {
   return (
     <div className="progressbar">
       <section className="progressbar_container">
@@ -28,7 +27,11 @@ const ProgressBar = ({ step, setStep }) => {
           </article>
         </div>
         <div className="progressbar_container_div">
-          <article className={`unfill ${step === 4 ? "fill" : ""}`}>4</article>
+          <article
+            className={`unfill ${step === 4 || step === 5 ? "fill" : ""}`}
+          >
+            4
+          </article>
           <article className="steps">
             <p className="steps_number">step 4</p>
             <p className="capital"> SUMMARY</p>
