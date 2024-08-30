@@ -69,7 +69,7 @@ const Home = () => {
             <Button
               next="Next Step"
               clickNext={handleNext}
-              background="#0d0739bd"
+              background="hsl(213, 96%, 18%)"
               color="white"
               step={step}
             />
@@ -80,9 +80,9 @@ const Home = () => {
               back="Go Back"
               clickBack={handleBack}
               clickNext={handleNext}
-              background="#0d0739bd"
+              background="hsl(213, 96%, 18%)"
               color="white"
-              backgroundBack="#e5dfdf"
+              backgroundBack="hsl(231, 100%, 99%)"
               colorBack="grey"
               step={step}
             />
@@ -93,9 +93,9 @@ const Home = () => {
               back="Go Back"
               clickBack={handleBack}
               clickNext={handleNext}
-              background="#0d0739bd"
+              background="hsl(213, 96%, 18%)"
               color="white"
-              backgroundBack="#e5dfdf"
+              backgroundBack="hsl(231, 100%, 99%)"
               colorBack="grey"
               step={step}
             />
@@ -106,9 +106,9 @@ const Home = () => {
               back="Go Back"
               clickBack={handleBack}
               clickNext={handleNext}
-              background="rgb(34, 37, 211)"
+              background="hsl(243, 100%, 62%)"
               color="white"
-              backgroundBack="#e5dfdf"
+              backgroundBack="hsl(231, 100%, 99%)"
               colorBack="grey"
               step={step}
             />

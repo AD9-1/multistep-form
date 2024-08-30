@@ -1,9 +1,9 @@
 @use "./styles/partials/mixins.scss" as *;
-
+@use "./styles/partials/variables.scss" as *;
 .App {
   text-align: center;
   min-height: 100vh;
-  background-color: aliceblue;
+  background-color: $Magnolia;
   display: flex;
   align-items: center;
   justify-content: center;

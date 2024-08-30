@@ -13,7 +13,7 @@
     h1 {
       font-family: Ubuntu-bold;
       text-align: left;
-      color: $Bluish-grey;
+      color: $Marine-blue;
       margin-bottom:1rem;
     }
     .description {
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
-    background-color: #c0bcbc2b;
+    background-color: $Alabaster;
     max-width: 80%;
     margin: auto;
     margin-bottom: 1rem;
@@ -37,7 +37,7 @@
   
     .horizontal--line {
       border: 0;
-      border-top: 1px solid rgb(209, 204, 204);
+      border-top: 1px solid $Light-gray;
       width: 100%; /* Adjust width as needed */
     }
     &__article {
@@ -48,7 +48,7 @@
       font-size: 18px;
 
       .custom {
-        color: $Bluish-grey;
+        color: $Marine-blue;
         font-family: Ubuntu-bold;
         font-size: 18px;
       }
@@ -61,7 +61,7 @@
     margin: auto;
     color:$Light-grey;
     &__total{
-      color:rgb(80, 51, 224);
+      color:$Purplish-blue;
       font-family: Ubuntu-bold;
         font-size: 20px;
     }

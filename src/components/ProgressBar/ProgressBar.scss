@@ -43,12 +43,12 @@
           color: rgba(221, 217, 217, 0.671);
           text-transform: uppercase;
           font-size: 13px;
-          text-align: justify;
+          text-align: left;
         }
         .capital {
           font-family: Ubuntu-Medium;
           color: white;
-          text-align: justify;
+          text-align: left;
         }
         @include mobile {
           display: none;
@@ -66,9 +66,12 @@
         }
       }
       .fill {
-        background-color: rgb(133, 224, 240);
-        color: black;
-        border: 0cap;
+        background-color: $Light-blue;
+        color: $Marine-blue;
+        border: 1px solid  $Light-blue;
+        font-family: Ubuntu-bold;
+        padding: 0.6rem;
+      
       }
     }
   }

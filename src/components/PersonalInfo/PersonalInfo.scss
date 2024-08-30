@@ -12,6 +12,7 @@
   align-items: center;
   @include mobile {
     border-radius: 15px;
+    padding-top:2rem;
   }
 
   &_heading {
