@@ -6,7 +6,7 @@
   background-color: white;
   width: 100%;
   height: 100%;
-  color: $Bluish-grey;
+  color: $Marine-blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,12 +22,12 @@
     text-align: left;
   }
   &_para {
-    font-family: "Ubuntu-regular";
+    font-family: "Ubuntu-Medium";
     margin-bottom: 1rem;
-    color: $Light-grey;
+    color: $Light-gray;
     width: 70%;
     line-height: 1.5;
-    text-align: justify;
+    text-align: left;
   }
   &_info {
     display: flex;
@@ -47,25 +47,33 @@
       }
       input {
         height: 40px;
-        border: 0.1px solid $Light-grey;
+        border: 0.1px solid $Light-gray;
         border-radius: 10px;
         padding-left: 20px;
         cursor: pointer;
         outline: none;
         font-family: Ubuntu-Medium;
         color:$Bluish-grey;
-        font-size: 20px;
+        font-size: 18px;
+    
         &:focus {
-          border: 0.1px solid rgb(86, 70, 227);
+          border: 0.1px solid $Purplish-blue;
+       
+        }
+        &::placeholder{
+          color:$Cool-gray;
+          font-family: Ubuntu-Medium;
+          font-size: 17px;
         }
       }
 
       .activeRedInput {
-        border: 0.1px solid red;
+        border: 0.1px solid $Strawberry-red;
       }
       .activeRed {
-        color: red;
+        color: $Strawberry-red;
         text-align: end;
+        font-family: Ubuntu-bold;
       }
     }
   }

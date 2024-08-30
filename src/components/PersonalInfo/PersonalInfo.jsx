@@ -37,6 +37,7 @@ const PersonalInfo = ({ formData, setFormData, redfield, setRedfield }) => {
             name="name"
             onChange={handlechange}
             value={formData.name}
+            placeholder="e.g. Stephen King"
             className={redfield.name ? "activeRedInput" : ""}
           />
         </section>
@@ -52,6 +53,7 @@ const PersonalInfo = ({ formData, setFormData, redfield, setRedfield }) => {
             name="email"
             onChange={handlechange}
             value={formData.email}
+            placeholder="e.g. stephenking@lauren.com"
             className={redfield.email ? "activeRedInput" : ""}
           />
         </section>
@@ -67,6 +69,7 @@ const PersonalInfo = ({ formData, setFormData, redfield, setRedfield }) => {
             name="phone"
             onChange={handlechange}
             value={formData.phone}
+            placeholder="e.g. +1 234 567 890"
             className={redfield.phone ? "activeRedInput" : ""}
           />
         </section>
