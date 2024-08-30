@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1em;
-
+border-radius: 10px;
   &-addons {
     font-family: "Ubuntu-bold";
     width: 75%;
@@ -29,6 +29,7 @@
     flex-direction: column;
     gap: 2rem;
     width: 75%;
+    margin-top: 2rem;
     @include mobile
     {
       margin-top: 4rem;
