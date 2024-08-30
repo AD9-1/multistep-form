@@ -141,9 +141,9 @@ const Addons = () => {
         </div>
         <section className="slider">
           <div className="slider__div">
-            <span>monthly</span>{" "}
+            <span className={time==="monthly"?"timechecked":"timeunchecked"}>Monthly</span>
             <Switch checked={checked} onChange={handleChange} />
-            <span>yearly</span>
+            <span className={time==="yearly"?"timechecked":"timeunchecked"}>Yearly</span>
           </div>
         </section>
       </div>

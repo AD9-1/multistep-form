@@ -3,7 +3,6 @@
 @use "../../styles//partials/mixins.scss" as *;
 .addons {
   height: 100%;
-
   background-color: white;
   @include mobile {
     border-radius: 15px;
@@ -27,6 +26,7 @@
   &_options {
     display: flex;
     justify-content: space-between;
+    gap:1em;
     margin-bottom: 1rem;
     padding:0 5rem;
     @include mobile {
@@ -35,15 +35,16 @@
       padding:0;
     }
     section {
-      height: 8rem;
-      width: 15%;
-      padding: 2rem;
+      height: 15rem;
+      width: 23%;
+      padding-left: 1.2rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: flex-start;
       border-radius: 10px;
       &:hover{
-        border: 1px solid rgba(104, 50, 219, 0.425);
+        border: 1px solid $Pastel-blue;
         cursor: pointer;
       }
       @include mobile {
@@ -58,16 +59,21 @@
       }
 
       .option {
+        display: flex;
+        flex-direction: column;
+        gap:.3rem;
         h3 {
           font-family: Ubuntu-Regular;
-          font-size: 1em;
+          font-size: 18px;
+          text-align: left;
           @include mobile {
             text-align: left;
           }
         }
         p {
           color: $Light-grey;
-          font-size: 15px;
+          font-size: 18px;
+          text-align: left;
           @include mobile {
             text-align: left;
           }
@@ -75,15 +81,15 @@
       }
     }
     &_clicked {
-      border: 1px solid rgba(104, 50, 219, 0.425);
-      background-color: rgba(204, 197, 219, 0.425);
+      border: 1px solid $Pastel-blue;
+      background-color: $Alabaster;
     }
     &_unclicked {
       border: 1px solid $Light-grey;
     }
   }
   .slider {
-    background-color: #d4cff01f;
+    background-color:$Alabaster;
     width: 70%;
     margin: auto auto;
     margin-top: 2rem;
@@ -93,6 +99,16 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 5rem;
+    &__div{
+.timechecked{
+  color:$Marine-blue;
+  font-family:Ubuntu-bold;
+}
+.timeunchecked{
+  color:$Light-grey;
+  font-family:Ubuntu-bold;
+}
+    }
     @include mobile{
       width:80%;
     }
