@@ -99,7 +99,7 @@ const SelectPlan = ({ step, setStep }) => {
               <div className="checkbox-custom"></div>
               <article>
                 <h3>Customizable Profile</h3>
-                <p>Custom Theme</p>
+                <p>Custom theme on your profile</p>
               </article>
               <span>
                 +${time === "monthly" ? 2 : 20}/

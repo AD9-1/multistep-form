@@ -85,8 +85,8 @@ const FinishUp = () => {
             : "year"}
           )
         </p>
-        <p>
-          ${calculation()}/
+        <p className="finishup__article__total">
+          +${calculation()}/
           {Object.keys(selectedplan).length === 0
             ? time === "monthly"
               ? "mo"

@@ -32,6 +32,7 @@
     margin-top: 4rem;;
     padding:1em;
     border-radius: 10px;
+  
     .horizontal--line {
       border: 0;
       border-top: 1px solid rgb(209, 204, 204);
@@ -42,11 +43,12 @@
       color: $Light-grey;
       display: flex;
       justify-content: space-between;
-      font-size: 15px;
+      font-size: 18px;
 
       .custom {
         color: $Bluish-grey;
         font-family: Ubuntu-bold;
+        font-size: 18px;
       }
     }
   }
@@ -55,5 +57,11 @@
     justify-content: space-between;
     width: 80%;
     margin: auto;
+    color:$Light-grey;
+    &__total{
+      color:rgb(80, 51, 224);
+      font-family: Ubuntu-bold;
+        font-size: 20px;
+    }
   }
 }

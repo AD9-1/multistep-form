@@ -4,9 +4,9 @@ import advanced from "../../assets/images/icon-advanced.svg";
 import pro from "../../assets/images/icon-pro.svg";
 import { Switch } from "@mui/material";
 import "./Addons.scss";
-import Button from "../Button/Button";
+
 import { PlanContext } from "../../context/PlanContext";
-const Addons = ({ step, setStep }) => {
+const Addons = () => {
   const [checked, setChecked] = React.useState(
     sessionStorage.getItem("timeSession")
       ? JSON.parse(sessionStorage.getItem("timeSession"))

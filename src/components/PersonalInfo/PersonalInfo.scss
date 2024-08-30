@@ -10,13 +10,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include mobile{  border-radius: 15px;}
+  @include mobile {
+    border-radius: 15px;
+  }
 
   &_heading {
     font-family: "Ubuntu-bold";
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     width: 70%;
+    text-align: left;
   }
   &_para {
     font-family: "Ubuntu-regular";
@@ -24,6 +27,7 @@
     color: $Light-grey;
     width: 70%;
     line-height: 1.5;
+    text-align: justify;
   }
   &_info {
     display: flex;
@@ -38,10 +42,27 @@
       label {
         font-family: "Ubuntu-Medium";
         text-align: left;
+        display: flex;
+        justify-content: space-between;
       }
       input {
         height: 40px;
         border: 0.1px solid $Light-grey;
+        border-radius: 10px;
+        padding-left: 20px;
+        cursor: pointer;
+        outline: none;
+        &:focus {
+          border: 0.1px solid rgb(86, 70, 227);
+        }
+      }
+
+      .activeRedInput {
+        border: 0.1px solid red;
+      }
+      .activeRed {
+        color: red;
+        text-align: end;
       }
     }
   }
